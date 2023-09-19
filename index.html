@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="css/importfile.css" rel="Stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.3.js"></script>	
+ 
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>ProjectCarBr</title>
+
+</head>
+<body onload="oninit()" >
+    <div class="header">
+     <br>  <br>
+     
+    </div>
+
+    <div id="container">
+        <div id="#pageTitle_logo"></div>
+        <div>   
+            <form name="form1" method="post" enctype="multipart/form-data" target="targetIfr">
+                
+                <div class="row">
+                    <div class="col-25">
+                      <label for="fname">Informe a Marca ou Selecione(online) (*)</label>
+                    </div>
+                    <div class="col-50">
+                      <input type="text" name="Marca" placeholder="Informe Marca do Carro ou Selecione" id="marca">
+                    </div>
+                    <Select onclick="oninitmarca()" onchange="clearcombobox()" id="cboMarcas" >
+                        <option value="0">Nenhum</option>
+                    </Select>
+                </div>
+       
+            
+                
+            
+                
+                <div class="row">
+                    <div class="col-25">
+                      <label for="fname">Modelo (*)</label>
+                    </div>
+                    <div class="col-50">
+                      <input type="text" name="Modelo" placeholder="Informe Modelo do Carro ou Selecione" id="modelo">
+                    </div>
+                    <div class="row">
+                        <div >
+                           <input type="button" value = "Pesquisar" onclick="oninit()">
+                        </div>
+                    </div>
+                    <Select id="cboModelo" onclick="oninitmodelo()"  >
+                        <option value="0">Nenhum</option>
+                    </Select>
+                </div>
+         
+                <div class="row">
+                    <div class="col-25">
+                      <label for="fano">Ano(*)</label>
+                    </div>
+                    <div >
+                        <input type="text" name="Ano" placeholder="Informe o Ano de Fabricacao" id="ano"> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                      <label for="fvalor">Valor(*)</label>
+                    </div>
+                    <div >
+                        <input type="text" name="Valor" placeholder="Informe o Valor" id="valor">
+                    </div>
+                </div>
+                <div >
+                    <div >
+                        <input type="button" value = "Excluir Carro" onclick="deletecarro()">
+                    </div>
+                </div>
+                <div  class="row">
+                    <div >
+                        <button type="submit">Salvar Novo Carro</button>
+                 </div>
+            
+                </div>
+                <hr >
+ 
+            </form>
+         <div class="row">
+            <div class="col-25">
+                <div style="overflow-x:auto;">
+                    <hr>
+                    <p class="col-75">Lista de Carros </p>
+                    <table>
+                        <thead>
+                            <th>Ano</th>
+                            <th>Modelo</th>
+                            <th>Valor</th>
+                        </thead>
+                        <tbody id="tbody">
+                        </tbody>
+                    </table><p></p>
+                </div>
+
+            </div>
+
+         </div>
+            
+
+    </div>
+    <footer>
+        <p></p>
+        <p>Autor: Paulo Andre Moraes<br>
+        <a href="mailto:sapemailb1@gmail.com">sapemailb1@gmail.com</a></p>
+    </footer>
+</body>
+</html>
