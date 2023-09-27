@@ -177,8 +177,7 @@ function getcarro() {
         if (!userinput || userinput.length == 0) {
             $.ajax({
                 method: "Get",
-                url: "http://127.0.0.1:5000/carros",
-                async: true,
+          
                 crossDomain: true,
                 jsonpCallback: "getJSON",
                 dataType: 'json',
@@ -265,7 +264,7 @@ $(document).ready(function () {
 
 
 function deletecarro() {
-    debugger
+
     var userinput = document.getElementById("modelo").value;
     if (userinput || userinput.length > 0) {
         $.ajax({
